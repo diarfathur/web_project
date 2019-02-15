@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import Signup
 from .forms import Form
+from Home.models import Koleksi
 
 # Create your views here.
 def isi_signup(request):
