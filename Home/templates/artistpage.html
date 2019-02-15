@@ -3,7 +3,7 @@
 
 
 {% block title %}
-    <title>Home</title>
+    <title>Home | {{ users.username }}</title>
 {% endblock title %}
     
 
@@ -11,22 +11,20 @@
     <div class="container-fluid background">
         <div class="konten">
             <div class = "row">            
-                {% for data in items%}
+                
                 <div class="col-md-3 my-3 col-6">
                     <div class="hovereffect">
                         <div class="squarepict">
-                            <img class="img-responsive" src="{{ data.gambar }}" alt=""/>
+                            <img class="img-responsive" src="{{ users.gambar }}" alt=""/>
                                 <div class="overlay"><br>
-                                    <h5 class="kontentext">{{ data.nama }}</h5> 
-                                    <h2 class="kontentext">{{ data.user.first_name }} {{ data.user.last_name }}</h2>
-                                    <h2 class="kontentext">{{ data.tipe_koleksi }}</h2>
+                                    <h5 class="kontentext">{{ users.nama }}</h5> 
                                 <p><a class="info" href="#">Catagory</a>
-                                <a class="info" href="{% url 'artistpage' username=data.user.username %}">Artist</a></p>
+                                <a class="info" href="#">Artist</a></p>
                                 </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                
             </div>
         </div> 
     </div>

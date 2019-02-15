@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import Arttype, Tools, Koleksi
 
-# Register your models here.
+my_model = [Arttype, Tools, Koleksi]
+admin.site.register(my_model)
