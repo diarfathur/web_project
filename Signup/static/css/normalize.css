@@ -1,0 +1,47 @@
+/* normalize.css - http://github.com/necolas/normalize.css */
+/*
+ * 1. Corrects font size not being inherited in all browsers
+ * 2. Addresses margins set differently in IE6/7, FF3+, S5, Chrome
+ * 3. Improves appearance and consistency in all browsers
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; 
+    margin: 0; 
+    vertical-align: baseline; 
+    *vertical-align: middle; 
+}
+
+
+button,
+input {
+    line-height: normal; 
+}
+
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+    cursor: pointer; 
+    -webkit-appearance: button; 
+    *overflow: visible;  
+}
+
+
+input[type="checkbox"],
+input[type="radio"] {
+    box-sizing: border-box; 
+    padding: 0; 
+    *height: 13px; 
+    *width: 13px; 
+}
+
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
