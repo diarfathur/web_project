@@ -1,0 +1,62 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" type="text/css" media="screen" href="{% static 'css/style-home.css'%}">
+    
+    {% block title %}
+    {% endblock title %}
+        
+</head>
+<body>
+    <header class="sticky-top shadow">
+        <div class="container-fluid heading">
+            <div class="row">
+                <div class="col-md-2 text-center namatoko">
+                    <div>PHOSPHENES</div>
+                </div>
+     
+                <div class="col-md-10 text-center home">
+                    <nav>
+                        <ul class="nav justify-content-end">                            
+                            <a class="nav-link top" href="{% url 'home' %}">Art Gallery</a>
+                            <a class="nav-link top" href="{% url 'signup_list' %}">Sign Your Creativity</a>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header>
+        
+
+    </header>
+
+    <section>
+        
+        {% block section %}
+            
+        {% endblock section %}
+            
+
+    </section>
+
+    <!-- <footer class="sticky-top shadow">
+        <div class="container-fluid heading">
+            <div class="row">
+                <div class="col-md-12 text-center namatoko">
+                    <div></div>
+                </div>
+            </div>
+        </div>
+    </footer> -->
+    
+
+
+</body>
+</html>

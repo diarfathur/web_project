@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <title>Home</title>
+{% endblock title %}
+    
+
+{% block section %}
+    <div class="container-fluid background">
+        <div class="konten">
+            <div class = "row">            
+                {% for data in items%}
+                <div class="col-md-3 my-3 col-6">
+                    <div class="hovereffect">
+                        <div class="squarepict">
+                            <img class="img-responsive" src="{{ data.gambar }}" alt=""/>
+                                <div class="overlay"><br>
+                                    <h5 class="kontentext">{{ data.nama }}</h5> 
+                                    <h2 class="kontentext">{{ data.user.first_name }} {{ data.user.last_name }}</h2>
+                                    <h2 class="kontentext">{{ data.tipe_koleksi }}</h2>
+                                <p>
+                                <a class="info" href="{% url 'detailpage' nama_koleksi=data.nama %}">See Detail</a>
+                                </p>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div> 
+    </div>
+    
+{% endblock section %}

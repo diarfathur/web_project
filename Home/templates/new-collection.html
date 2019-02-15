@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+    <title>New Collection</title>
+{% endblock title %}
+    
+
+{% block section %}
+    <div class="container-fluid">
+        <div class="konten ">
+            <div class = "row ">            
+                
+                <div class="col-12 newcollection">
+                    <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+                        {{ add_new.as_p }}
+                        <button type="submit" class="btn btn-info">Post Me!</button>
+                
+                    </form>
+
+                </div>
+                
+            </div>
+        </div> 
+    </div>    
+
+
+{% endblock section %}
+    
