@@ -1,0 +1,109 @@
+{% load static %}
+
+
+<!DOCTYPE html>
+<!--[if IE 7]> <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]> <html class="lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+    <link href="{% static 'css/normalize.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Registration Form</title>/>
+  <!--[if lt IE 9]><script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white">
+        <nav class="my-2 my-md-0 mr-md-3">
+          <a class="p-2 text-dark" href="{% url 'signup' %}">Signup</a>
+          </nav>
+
+          {% block content %}
+          <h2>Sign up</h2>
+          <form method="post">
+            {% csrf_token %}
+            {% for field in form %}
+              <p>
+                <div class="row 1">
+            <div class="col-md-4 col-sm-6">
+                <div class="ke-1">
+                  <br/>
+                  <span id="usrid"><b>username</b></span>
+                  <br/>
+                  <p class="content">
+                  </p>
+                  <span><a href=""></a></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="ke-2">
+                  <br/>
+                  <span id="frstname"><b>First Name</b></span>
+                  <br/>
+                  <p class="content">
+                  </p>
+                  <span><a href=""></a></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="ke-3">
+                  <br/>
+                  <span id="lsname"><b>Last Name</b></span>
+                  <br/>
+                  <p class="content">
+                  </p>
+                  <span><a href=""></a></span>
+                </div>
+            </div>
+        </div>
+        <div class="row 2">
+            <div class="col-md-4 col-sm-6">
+                <div class="ke-4">
+                  <br/>
+                  <span id="pwd"><b>Kompor</b></span>
+                  <br/>
+                  <p class="content">
+                  </p>
+                  <span><a href=""></a></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="ke-5">
+                  <br/>
+                  <span id="conpwd"><b>Confirm Password</b></span>
+                  <br/>
+                  <p class="content">
+                  </p>
+                  <span><a href=""></a></span>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="ke-6">
+                  <br/>
+                  <span id="countr"><b>Mobil</b></span>
+                  <br/>
+                  <p class="content">
+                  </p>
+                  <span><a href=""></a></span>
+                </div>
+            <div class="col-md4 col-sm-6">
+                <div class="ke-7">
+                  <br/>
+                  <span id="addrs"><b>Address</b></span>
+                </div>
+            </div>
+          </div>
+        </div>    
+    </section>
+  </div>
+          {% endfor %}
+          {% endblock %}
+  <section class="about">
+    Already Have an Account? Please <a href="http://www.phosphenes.com/signin">Sign In</a>
+  </section>
+
+</body>
+</html>

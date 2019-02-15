@@ -176,19 +176,13 @@ img {
 .squarepict{
     height: 250px;
     width: 350px;
+    text-align: center;
 }
 
 .kontentext{
     color: whitesmoke;
 }
 
-.headerparalax{
-    position: fixed;
-    z-index: -100;
-    height: 200px;
-    object-fit: cover;
-    border:1px solid black;
-}
 
 .kepala{
     width: 100%;
@@ -196,4 +190,10 @@ img {
 
 .newcollection{
     margin-top: 40px;
+}
+
+.bigframe{
+    height: auto;
+    width: 1000px;
+    text-align: center;
 }

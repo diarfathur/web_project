@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>Sign Up</title>
+{% endblock title %}
+
+
+{% block section %}
+
+    <div class="container-fluid">
+        <div class = "row justify-content-center">            
+            
+            <form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+                <div>
+                    <label class="control-label col-sm-6">Username</label>
+                    <div class="col-sm-6">
+                        {{ form.username }}
+                        
+                    </div>
+                    <label class="control-label col-sm-6" for="email">First Name</label>
+                    <div class="col-sm-6">
+                        {{ form.first_name }}
+                        
+                    </div>
+                    <label class="control-label col-sm-6" for="email">Last Name</label>
+                    <div class="col-sm-6">
+                        {{ form.last_name }}
+                        
+                    </div>
+                    <label class="control-label col-sm-6" for="email">Password</label>
+                    <div class="col-sm-6">
+                        {{ form.password }}
+                        
+                    </div>
+                    <label class="control-label col-sm-6" for="email">Confirm Password</label>
+                    <div class="col-sm-6">
+                        {{ form.confirm_password }}
+                        
+                    </div>
+                    <label class="control-label col-sm-6" for="email">Country</label>
+                    <div class="col-sm-6">
+                        {{ form.country }}
+                        
+                    </div>
+                    <label class="control-label col-sm-6" for="email">Address</label>
+                    <div class="col-sm-6">
+                        {{ form.address }}
+                </div>
+                
+                    <button type="submit" class="save btn btn-default">Simpan</button>
+                
+            </form>
+            
+        </div> 
+    </div>
+    
+{% endblock section %}

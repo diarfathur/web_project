@@ -20,8 +20,9 @@
                                     <h5 class="kontentext">{{ data.nama }}</h5> 
                                     <h2 class="kontentext">{{ data.user.first_name }} {{ data.user.last_name }}</h2>
                                     <h2 class="kontentext">{{ data.tipe_koleksi }}</h2>
-                                <p><a class="info" href="#">Catagory</a>
-                                <a class="info" href="{% url 'artistpage' username=data.user.username %}">Artist</a></p>
+                                <p>
+                                <a class="info" href="{% url 'detailpage' nama_koleksi=data.nama %}">See Detail</a>
+                                </p>
                                 </div>
                         </div>
                     </div>

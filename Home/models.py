@@ -16,7 +16,7 @@ class Arttype(models.Model):
 
 class Koleksi(models.Model):
     nama = models.CharField(max_length=50)
-    gambar = models.CharField(max_length=200)
+    gambar = models.ImageField(upload_to="Media_user")
     user = models.ForeignKey(Signup, on_delete=models.CASCADE)
     tipe_koleksi = models.ForeignKey(Arttype, on_delete=models.CASCADE)
 
